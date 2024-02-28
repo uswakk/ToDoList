@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6f38156390.js" crossorigin="anonymous"></script>
+    <title>Life Timer</title>
+</head>
+<body>
+    <div class="background" >
+        <div class="container" id="initialContent">
+            <h1>Kindly Enter Your Date Of Birth</h1>
+            
+        </div>
+        <div class="center">
+            <div class="container hide" id="afterDOB">
+                <h1>Life Journey Covered Untill Now</h1>
+                <div class="time-container">
+                    <h2 >
+                        <div id="year">
+                            0
+                        </div>
+                        Year
+                    </h2>
+                    <h2 >
+                        <div id="month">
+                            0
+                        </div>
+                        Months
+                    </h2>
+                    <h2>
+                        <div id="day">
+                            0
+                        </div>
+                        Days
+                    </h2>
+                    <h2 >
+                        <div id="hour">
+                            0
+                        </div>
+                        Hours
+                    </h2>
+                    <h2 >
+                        <div id="minute">
+                            0
+                        </div>
+                        Minutes
+                    </h2>
+                    <h2 >
+                        <div id="second">
+                            0
+                        </div>
+                        Seconds
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="settings">
+            <i class="fa-solid fa-gear" id="settingsIcon"></i>
+            <div class="settings-content hide" id="settingsContent">
+                <input type="date" id="dobInput">
+                <button id="dobButton">Add DOB</button>
+            </div>
+        </div>
+       
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>

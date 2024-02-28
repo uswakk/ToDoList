@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.background
+{
+    background-image: url(sunset2.jpg);
+    background-size: cover;
+    font-family: "Oswald", sans-serif;
+    height: 100vh;
+}
+
+.container
+{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    text-align: center;
+    height: 100vh;
+    
+}
+
+.container h1
+{
+    font-size:  4rem;
+    color: #fffdea;
+}
+
+.settings
+{
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+
+}
+
+.settings-content
+{
+    display: flex;
+    gap: 1rem;
+}
+
+.settings-content input
+{
+    padding: 0.5rem;
+    font-size: 0.75rem;
+}
+
+.settings-content button
+{
+    padding: 0.8rem;
+    background-color: #c66686;
+    color: white;
+    border-radius: 6.5px;
+    border: none;
+}
+
+.settings-content button:hover
+{
+    padding: 0.8rem;
+    background-color: #c66686;
+    color: white;
+    border-radius: 6.5px;
+    border: none;
+    cursor: pointer;
+}
+.settings .fa-gear
+{
+    color: white;
+    font-size: 3rem;
+}
+
+.settings .fa-gear:hover
+{
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+}
+.hide
+{
+    display: none;
+}
+
+.time-container
+{
+
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.time-container h2
+{
+    font-size: 2.3rem;
+}

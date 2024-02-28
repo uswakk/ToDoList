@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Calculator</title>
+    <style>
+        body {
+            background-color: #0A0A0A; /* Dark background color */
+            color: #FFFFFF; /* White text color */
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #calculator {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background-color: #1E1E1E; /* Dark calculator background color */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+        }
+
+        .calculator-btn {
+            width: 25%;
+            padding: 15px;
+            margin: 5px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #result {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1.5em;
+            background-color: #292929; /* Dark result display background color */
+            border: none;
+            border-radius: 5px;
+            color: #FFFFFF; /* White text color */
+        }
+    </style>
+</head>
+<body>
+
+<div id="calculator">
+    <div id="result">0</div>
+    <button class="calculator-btn" onclick="clearResult()">C</button>
+    <button class="calculator-btn" onclick="appendCharacter('/')">/</button>
+    <button class="calculator-btn" onclick="appendCharacter('*')">*</button>
+    <button class="calculator-btn" onclick="appendCharacter('7')">7</button>
+    <button class="calculator-btn" onclick="appendCharacter('8')">8</button>
+    <button class="calculator-btn" onclick="appendCharacter('9')">9</button>
+    <button class="calculator-btn" onclick="appendCharacter('-')">-</button>
+    <button class="calculator-btn" onclick="appendCharacter('4')">4</button>
+    <button class="calculator-btn" onclick="appendCharacter('5')">5</button>
+    <button class="calculator-btn" onclick="appendCharacter('6')">6</button>
+    <button class="calculator-btn" onclick="appendCharacter('+')">+</button>
+    <button class="calculator-btn" onclick="appendCharacter('1')">1</button>
+    <button class="calculator-btn" onclick="appendCharacter('2')">2</button>
+    <button class="calculator-btn" onclick="appendCharacter('3')">3</button>
+    <button class="calculator-btn" onclick="calculateResult()">=</button>
+    <button class="calculator-btn" onclick="appendCharacter('0')">0</button>
+    <button class="calculator-btn" onclick="appendCharacter('.')">.</button>
+</div>
+
+<script>
+    let result = document.getElementById("result");
+    let expression = "";
+
+    function appendCharacter(char) {
+        expression += char;
+        result.textContent = expression;
+    }
+
+    function calculateResult() {
+        try {
+            expression = eval(expression).toString();
+            result.textContent = expression;
+        } catch (error) {
+            result.textContent = "Error";
+            expression = "";
+        }
+    }
+
+    function clearResult() {
+        expression = "";
+        result.textContent = "0";
+    }
+</script>
+
+</body>
+</html>

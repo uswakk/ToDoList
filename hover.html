@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+
+body 
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px; 
+}
+button {
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 50%;
+  border: 0px;
+  transition: all 0.5s;
+}
+
+/*button:hover
+{
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+    border-radius: 0px;
+}*/
+</style>
+</head>
+<body>
+
+<button id="element" onclick="changeStyles()"></button>
+
+<script>
+const ID = document.getElementById("element")
+
+function changeStyles()
+{
+    ID.style.borderRadius = '0px';
+    ID.style.width = '100%';
+    ID.style.height = '100vh';
+    ID.style.backgroundColor = 'red';
+    
+}
+</script>
+</body>
+</html>

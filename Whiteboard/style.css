@@ -1,0 +1,17 @@
+
+:root
+{
+    --drawing-mouse: crosshair;
+    --eraser-mouse:  url("myBall.cur");
+    --color: black;
+    --background-color: rgb(189, 132, 132);
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+}
